@@ -120,7 +120,6 @@ definitions:
         example: User registered successfully
         type: string
     type: object
-host: localhost:8088
 info:
   contact:
     email: hilmiromadoni@gmail.com
@@ -328,6 +327,7 @@ paths:
       - Auth
 schemes:
 - http
+- https
 securityDefinitions:
   BearerAuth:
     in: header

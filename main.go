@@ -17,14 +17,14 @@ import (
 )
 
 func init() {
-	if _, err := os.Stat(".env"); err == nil { 
-	err := godotenv.Load()
-	if err != nil {
-		fmt.Println("Gagal memuat file .env:")
-	} else {
-		fmt.Println("File .env dimuat (local)")
+	if _, err := os.Stat(".env"); err == nil {
+		err := godotenv.Load()
+		if err != nil {
+			fmt.Println("Gagal memuat file .env:")
+		} else {
+			fmt.Println("File .env dimuat (local)")
+		}
 	}
-}
 }
 
 // @title TES SWAGGER PEMROGRAMAN III
@@ -35,9 +35,8 @@ func init() {
 // @contact.url https://github.com/hilmibotak
 // @contact.email hilmiromadoni@gmail.com
 
-// @host localhost:8088
 // @BasePath /
-// @schemes http
+// @schemes http https
 // @securityDefinitions.apikey BearerAuth
 // @in header
 // @name Authorization
@@ -71,7 +70,5 @@ func main() {
 		log.Fatalf("Failed to start server: %v", err)
 	}
 }
-
-
 
 //hilmibotak
